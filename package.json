@@ -35,6 +35,6 @@
     "uuid": "^9.0.1"
   },
   "browser":{
-    "child_process": false
+    "child_process": true
   }
 }
