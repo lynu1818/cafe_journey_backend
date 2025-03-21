@@ -1,10 +1,11 @@
-import pkg from 'pg';
-const { Pool } = pkg;
+import mysql from 'mysql2/promise';
+import dotenv from 'dotenv';
+dotenv.config();
 
-
-export const connection = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+export const connection = mysql.createPool({
+    host: "localhost",
+    user: "root",
+    password: "lynu**18",
+    database: "cafe_journey",
+    connectTimeout: 30000, // 30 seconds
 });
